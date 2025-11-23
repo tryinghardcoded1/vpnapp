@@ -8,7 +8,6 @@ import { SpeedTestScreen } from './screens/SpeedTestScreen';
 import { SubscriptionScreen } from './screens/SubscriptionScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
 import { Helmet } from "react-helmet"; // <-- Add this
-
 function App() {
   // Global State
   const [isAuthenticated, setIsAuthenticated] = useState(false);
