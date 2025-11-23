@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "New York #1",
+    "country": "USA",
+    "protocols": ["WireGuard", "OpenVPN"],
+    "status": "online",
+    "premiumOnly": false
+  },
+  {
+    "id": "2",
+    "name": "London Central",
+    "country": "UK",
+    "protocols": ["WireGuard"],
+    "status": "online",
+    "premiumOnly": false
+  },
+  {
+    "id": "3",
+    "name": "Frankfurt Secure",
+    "country": "Germany",
+    "protocols": ["OpenVPN"],
+    "status": "online",
+    "premiumOnly": true
+  },
+  {
+    "id": "4",
+    "name": "Tokyo Fast",
+    "country": "Japan",
+    "protocols": ["WireGuard"],
+    "status": "online",
+    "premiumOnly": true
+  },
+  {
+    "id": "5",
+    "name": "Singapore Direct",
+    "country": "Singapore",
+    "protocols": ["WireGuard", "OpenVPN"],
+    "status": "online",
+    "premiumOnly": true
+  }
+]
