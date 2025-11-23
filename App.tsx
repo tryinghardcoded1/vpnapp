@@ -7,6 +7,7 @@ import { HomeScreen } from './screens/HomeScreen';
 import { SpeedTestScreen } from './screens/SpeedTestScreen';
 import { SubscriptionScreen } from './screens/SubscriptionScreen';
 import { ProfileScreen } from './screens/ProfileScreen';
+import { Helmet } from "react-helmet"; // <-- Add this
 
 function App() {
   // Global State
@@ -71,20 +72,27 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-cyan-500 selection:text-white">
-      {/* Desktop Constraint Container: Simulating Mobile App Feel */}
-      <div className="max-w-md mx-auto min-h-screen bg-slate-950 shadow-2xl relative flex flex-col">
-        
-        {/* Screen Content */}
-        <main className="flex-1 pb-24 overflow-y-auto scrollbar-hide">
-          {renderScreen()}
-        </main>
+    <>
+      {/* Helmet injects manifest into <head> */}
+      <Helmet>
+        <link rel="manifest" href="/manifest.json" />
+      </Helmet>
 
-        {/* Bottom Navigation */}
-        <Navbar currentScreen={currentScreen} onNavigate={setCurrentScreen} />
-        
+      <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-cyan-500 selection:text-white">
+        {/* Desktop Constraint Container: Simulating Mobile App Feel */}
+        <div className="max-w-md mx-auto min-h-screen bg-slate-950 shadow-2xl relative flex flex-col">
+          
+          {/* Screen Content */}
+          <main className="flex-1 pb-24 overflow-y-auto scrollbar-hide">
+            {renderScreen()}
+          </main>
+
+          {/* Bottom Navigation */}
+          <Navbar currentScreen={currentScreen} onNavigate={setCurrentScreen} />
+          
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
